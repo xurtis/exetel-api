@@ -1,0 +1,26 @@
+[package]
+name = "exetel-api"
+version = "0.1.0"
+authors = ["Curtis Millar <curtis@curtism.me>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "exetel_api"
+path = "src/lib.rs"
+
+[[bin]]
+name = "exetel"
+path = "src/main.rs"
+
+[dependencies]
+reqwest = "0.10.4"
+serde = { version = "1.0", features = [ "derive" ] }
+serde_json = "1.0.53"
+structopt = "0.3.14"
+dialoguer = "0.6.2"
+anyhow = "1.0.31"
+tokio = { version = "0.2", features = [ "macros" ] }
+mime = "0.3.16"
+chrono = "0.4.11"
